@@ -41,6 +41,12 @@ class UI{
     static showAlert(message,className){
         const div=document.createElement('div');
         div.className=`alert ${className}`;
+        if(className==='danger'){
+            div.style.backgroundColor="red";
+        }
+        else if(className==='success'){
+            div.style.backgroundColor="green";        
+        }
         div.appendChild(document.createTextNode(message));
         const container=document.querySelector('.container');
         const form=document.querySelector('#book-form');
